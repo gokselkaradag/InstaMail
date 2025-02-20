@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaMail.WebUI", "InstaMail.WebUI\InstaMail.WebUI.csproj", "{C5BE4768-D5F5-4242-820E-C36ADE1883EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaMail.DataAccessLayer", "InstaMail.DataAccessLayer\InstaMail.DataAccessLayer.csproj", "{E6C2C483-612E-458D-87F1-87D72D63FE17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaMail.EntityLayer", "InstaMail.EntityLayer\InstaMail.EntityLayer.csproj", "{ECF03C89-DF8A-48CF-8BB8-907003AF53C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaMail.BusinessLayer", "InstaMail.BusinessLayer\InstaMail.BusinessLayer.csproj", "{99299BF9-C30B-489F-88FA-99CECF05FCE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5BE4768-D5F5-4242-820E-C36ADE1883EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5BE4768-D5F5-4242-820E-C36ADE1883EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5BE4768-D5F5-4242-820E-C36ADE1883EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5BE4768-D5F5-4242-820E-C36ADE1883EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C2C483-612E-458D-87F1-87D72D63FE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C2C483-612E-458D-87F1-87D72D63FE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C2C483-612E-458D-87F1-87D72D63FE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C2C483-612E-458D-87F1-87D72D63FE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF03C89-DF8A-48CF-8BB8-907003AF53C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF03C89-DF8A-48CF-8BB8-907003AF53C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF03C89-DF8A-48CF-8BB8-907003AF53C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF03C89-DF8A-48CF-8BB8-907003AF53C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99299BF9-C30B-489F-88FA-99CECF05FCE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99299BF9-C30B-489F-88FA-99CECF05FCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99299BF9-C30B-489F-88FA-99CECF05FCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99299BF9-C30B-489F-88FA-99CECF05FCE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
