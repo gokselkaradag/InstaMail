@@ -1,4 +1,19 @@
+using InstaMail.DataAccessLayer.Concrete;
+using InstaMail.DataAccessLayer.Services;
+using InstaMail.EntityLayer.Entity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<InstaMailContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<EmailReceiver>(); 
+
+builder.Services.Configure<ImapSettings>(builder.Configuration.GetSection("ImapSettings"));
+
+builder.Services.AddSingleton(sp => sp.GetRequiredService<IOptions<ImapSettings>>().Value);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -22,7 +37,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
         name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}")
+        pattern: "{controller=InstaMail}/{action=Index}/{id?}")
     .WithStaticAssets();
 
 

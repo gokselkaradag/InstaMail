@@ -1,0 +1,10 @@
+@{
+    ViewBag.Title = "InstaMail - Temporary Email Service";
+}
+
+<h2>Create Temporary Email</h2>
+
+@using (Html.BeginForm("CreateEmail", "InstaMail", FormMethod.Post))
+{
+    <button type="submit" class="btn btn-success">Generate New Email</button>
+}

@@ -15,7 +15,7 @@ public class EmailReceiver
         _imapSettings = imapSettings;
     }
 
-    public List<MimeMessage> FetchEmails(string emailAddress)
+    public List<MimeMessage> FetchEmails(string emailAddress, Action<MimeMessage> processEmail)
     {
         List<MimeMessage> emails = new List<MimeMessage>();
 

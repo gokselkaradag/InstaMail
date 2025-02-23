@@ -22,6 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\InstaMail.BusinessLayer\InstaMail.BusinessLayer.csproj" />
       <ProjectReference Include="..\InstaMail.DataAccessLayer\InstaMail.DataAccessLayer.csproj" />
       <ProjectReference Include="..\InstaMail.EntityLayer\InstaMail.EntityLayer.csproj" />
     </ItemGroup>

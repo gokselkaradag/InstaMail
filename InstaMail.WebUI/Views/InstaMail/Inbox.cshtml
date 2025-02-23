@@ -1,0 +1,39 @@
+@model InstaMail.EntityLayer.Entity.InstaMail
+
+@{
+    ViewBag.Title = "Inbox - " + Model.EmailAddress;
+}
+
+<h2>@Model.EmailAddress</h2>
+
+<button onclick="copyEmail()" class="btn btn-info mb-3">Copy Email</button>
+
+<h3 class="mt-4">Messages (@Model.EmailMessages.Count)</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Sender</th>
+        <th>Subject</th>
+        <th>Received At</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var message in Model.EmailMessages)
+    {
+        <tr>
+            <td>@message.Sender</td>
+            <td>@message.Subject</td>
+            <td>@message.Time.ToString("g")</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<script>
+function copyEmail() {
+    const email = "@Model.EmailAddress";
+    navigator.clipboard.writeText(email).then(() => {
+        alert("Copied: " + email);
+    });
+}
+</script>
