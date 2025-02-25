@@ -9,19 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0be0bc6b-e4ab-42a0-a959-c1c1c9fba179" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/InstaMailController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Inbox.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.DataAccessLayer/Concrete/InstaMailContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.DataAccessLayer/Concrete/InstaMailContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.DataAccessLayer/Migrations/InstaMailContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.DataAccessLayer/Migrations/InstaMailContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.DataAccessLayer/Services/EmailReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.DataAccessLayer/Services/EmailReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.EntityLayer/Entity/InstaMail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.EntityLayer/Entity/InstaMail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/HomeController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/InstaMail.WebUI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/InstaMail.WebUI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/Home/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/Home/Privacy.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/InstaMailController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/InstaMailController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +39,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8be3a835a33b22749161cd57a7225ef65e0c61c64c2bfd969e2e404130dd/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/GKSL1/RiderProjects/InstaMail/InstaMail.WebUI/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -62,27 +53,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.InstaMail.WebUI: https.executor": "Run",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.InstaMail.WebUI: https.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.InstaMail.WebUI: https">
     <configuration name="InstaMail.WebUI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/InstaMail.WebUI/InstaMail.WebUI.csproj" />
@@ -131,7 +122,9 @@
       <workItem from="1740060346260" duration="186000" />
       <workItem from="1740060578765" duration="339000" />
       <workItem from="1740060968601" duration="2420000" />
-      <workItem from="1740319322778" duration="6261000" />
+      <workItem from="1740319322778" duration="6622000" />
+      <workItem from="1740476423159" duration="2233000" />
+      <workItem from="1740478755707" duration="1676000" />
     </task>
     <task id="LOCAL-00001" summary="Project_Start">
       <option name="closed" value="true" />
@@ -197,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740063366171</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="InstaMaıl_WebUI_Transactions">
+      <option name="closed" value="true" />
+      <created>1740325821331</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740325821331</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +214,7 @@
     <MESSAGE value="..." />
     <MESSAGE value="new_project" />
     <MESSAGE value="Helpers_Services_Transactions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Helpers_Services_Transactions" />
+    <MESSAGE value="InstaMaıl_WebUI_Transactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="InstaMaıl_WebUI_Transactions" />
   </component>
 </project>

@@ -1,10 +1,35 @@
 @{
-    ViewBag.Title = "InstaMail - Temporary Email Service";
+    ViewBag.Title = "InstaMail - Geçici E-posta Hizmeti";
 }
 
-<h2>Create Temporary Email</h2>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">InstaMail</h1>
+        <p class="lead">Geçici E-posta Adresi Oluşturun</p>
+    </div>
 
-@using (Html.BeginForm("CreateEmail", "InstaMail", FormMethod.Post))
-{
-    <button type="submit" class="btn btn-success">Generate New Email</button>
-}
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-center">
+            @using (Html.BeginForm("CreateEmail", "InstaMail", FormMethod.Post, new { @class = "d-inline" }))
+            {
+                <button type="submit" class="btn btn-outline-success btn-lg">Yeni E-posta Oluştur</button>
+            }
+
+            @if (TempData["EmailId"] != null)
+            {
+                <a href="@Url.Action("Inbox", "InstaMail", new { emailId = TempData["EmailId"] })" class="btn btn-outline-primary btn-lg ml-2">
+                    Gelen Kutusuna Git
+                </a>
+            }
+        </div>
+    </div>
+</div>
+<hr style="border-top: 1px solid #ccc; margin: 20px 0;">
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <h3 class="card-title text-center mb-4" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 600;">Tek Kullanımlık Geçici E-posta Nedir?</h3>
+        <p class="card-text" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1rem; line-height: 1.6; text-align: justify;">
+            Tek kullanımlık e-posta, belirli bir süre geçtikten sonra kendi kendini imha eden geçici bir adreste e-posta almayı sağlayan bir hizmettir. Tempmail, 10minutemail, throwaway e-posta, sahte posta veya çöp kutusu gibi isimlerle de bilinir. Birçok forum, Wi-Fi sahipleri, web siteleri ve bloglar, içerik görüntüleyebilmeleri, yorum yazabilmeleri veya bir şey indirebilmeleri için ziyaretçilerin kayıt olmalarını ister. InstaMail, istenmeyen postalardan kaçınmanıza ve güvende olmanıza yardımcı olan en gelişmiş geçici e-posta hizmetidir.
+        </p>
+    </div>
+</div>

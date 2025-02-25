@@ -38,16 +38,34 @@ public class InstaMailController : Controller
         _db.SaveChanges();
         
         FetchEmailsForInstaMail(ınstaMail.ID);
-
+        TempData["EmailId"] = ınstaMail.ID;
+        
         return RedirectToAction("Inbox", new { emailId = ınstaMail.ID });
     }
 
-    public IActionResult Inbox(int emailId)
+    public IActionResult Inbox(int? emailId)
     {
+        if (!emailId.HasValue) 
+        {
+            emailId = TempData["EmailId"] as int?;
+        }
+
+        if (!emailId.HasValue) 
+        {
+            return RedirectToAction("Index");
+        }
+
         var ınstaMail = _db.InstaMails
             .Include(e => e.EmailMessages)
-            .FirstOrDefault(e => e.ID == emailId);
-        
+            .FirstOrDefault(e => e.ID == emailId.Value);
+
+        if (ınstaMail == null)
+        {
+            return RedirectToAction("Index"); 
+        }
+
+        TempData["EmailId"] = emailId.Value; 
+
         return View(ınstaMail);
     }
 
