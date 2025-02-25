@@ -8,12 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0be0bc6b-e4ab-42a0-a959-c1c1c9fba179" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/InstaMailController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/InstaMailController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/Shared/_Layout.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="0be0bc6b-e4ab-42a0-a959-c1c1c9fba179" name="Changes" comment="WebUI_Transactions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +119,7 @@
       <workItem from="1740060968601" duration="2420000" />
       <workItem from="1740319322778" duration="6622000" />
       <workItem from="1740476423159" duration="2233000" />
-      <workItem from="1740478755707" duration="1676000" />
+      <workItem from="1740478755707" duration="2013000" />
     </task>
     <task id="LOCAL-00001" summary="Project_Start">
       <option name="closed" value="true" />
@@ -198,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740325821331</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="WebUI_Transactions">
+      <option name="closed" value="true" />
+      <created>1740480760641</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740480760641</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +218,7 @@
     <MESSAGE value="new_project" />
     <MESSAGE value="Helpers_Services_Transactions" />
     <MESSAGE value="InstaMaıl_WebUI_Transactions" />
-    <option name="LAST_COMMIT_MESSAGE" value="InstaMaıl_WebUI_Transactions" />
+    <MESSAGE value="WebUI_Transactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="WebUI_Transactions" />
   </component>
 </project>
