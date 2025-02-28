@@ -8,7 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0be0bc6b-e4ab-42a0-a959-c1c1c9fba179" name="Changes" comment="update" />
+    <list default="true" id="0be0bc6b-e4ab-42a0-a959-c1c1c9fba179" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InstaMail/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/InstaMailController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Controllers/InstaMailController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Models/ErrorViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Inbox.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/InstaMail/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/Shared/Error.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InstaMail.WebUI/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/InstaMail.WebUI/Views/_ViewImports.cshtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +47,9 @@
     <setting file="mock://C:/Users/GKSL1/RiderProjects/InstaMail/InstaMail.WebUI/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -48,27 +61,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.InstaMail.WebUI: https.executor&quot;: &quot;Run&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.InstaMail.WebUI: https.executor": "Debug",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;PLAIN_TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.InstaMail.WebUI: https">
     <configuration name="InstaMail.WebUI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/InstaMail.WebUI/InstaMail.WebUI.csproj" />
@@ -119,7 +132,10 @@
       <workItem from="1740060968601" duration="2420000" />
       <workItem from="1740319322778" duration="6622000" />
       <workItem from="1740476423159" duration="2233000" />
-      <workItem from="1740478755707" duration="2407000" />
+      <workItem from="1740478755707" duration="3479000" />
+      <workItem from="1740489785954" duration="4263000" />
+      <workItem from="1740746402234" duration="57000" />
+      <workItem from="1740747640285" duration="7334000" />
     </task>
     <task id="LOCAL-00001" summary="Project_Start">
       <option name="closed" value="true" />
@@ -209,7 +225,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740480960888</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="idea_update">
+      <option name="closed" value="true" />
+      <created>1740481183091</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740481183091</updated>
+    </task>
+    <task id="LOCAL-00013" summary="controller_update">
+      <option name="closed" value="true" />
+      <created>1740481347487</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740481347487</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +260,8 @@
     <MESSAGE value="InstaMaıl_WebUI_Transactions" />
     <MESSAGE value="WebUI_Transactions" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="idea_update" />
+    <MESSAGE value="controller_update" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller_update" />
   </component>
 </project>

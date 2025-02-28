@@ -1,35 +1,107 @@
+@model InstaMail.EntityLayer.Entity.InstaMail
+
 @{
-    ViewBag.Title = "InstaMail - Geçici E-posta Hizmeti";
+    ViewData["Title"] = "InstaMail - Geçici E-Posta Hizmeti";
 }
 
-<div class="container mt-5">
-    <div class="text-center">
-        <h1 class="display-4">InstaMail</h1>
-        <p class="lead">Geçici E-posta Adresi Oluşturun</p>
-    </div>
-
-    <div class="row justify-content-center mt-4">
-        <div class="col-md-6 text-center">
+<main>
+    <article id="mail-create">
+        <div class="caption container col-12 col-lg-6 d-flex flex-column text-center">
+            <h1 class="title">InstaMail</h1>
+            <p class="desc">Geçici E-Posta Adresi Oluşturun</p>
+        </div>
+        <div class="container col-12 col-lg-6 d-flex flex-column flex-lg-row align-items-center justify-content-center gap-2">
+            <div class="mail col-12 col-lg-10">@Model?.EmailAddress</div>
+            <a href="#" class="mail-icon col-5 col-lg-2" onclick="copyEmail()">
+                <i class="bi bi-copy me-2"></i>Kopyala
+            </a>
             @using (Html.BeginForm("CreateEmail", "InstaMail", FormMethod.Post, new { @class = "d-inline" }))
             {
-                <button type="submit" class="btn btn-outline-success btn-lg">Yeni E-posta Oluştur</button>
-            }
-
-            @if (TempData["EmailId"] != null)
-            {
-                <a href="@Url.Action("Inbox", "InstaMail", new { emailId = TempData["EmailId"] })" class="btn btn-outline-primary btn-lg ml-2">
-                    Gelen Kutusuna Git
-                </a>
+                <button type="submit" class="mail-icon col-5 col-lg-2">
+                    <i class="bi bi-envelope me-2"></i>Yeni
+                </button>
             }
         </div>
-    </div>
-</div>
-<hr style="border-top: 1px solid #ccc; margin: 20px 0;">
-<div class="row justify-content-center mt-4">
-    <div class="col-md-8">
-        <h3 class="card-title text-center mb-4" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 600;">Tek Kullanımlık Geçici E-posta Nedir?</h3>
-        <p class="card-text" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1rem; line-height: 1.6; text-align: justify;">
-            Tek kullanımlık e-posta, belirli bir süre geçtikten sonra kendi kendini imha eden geçici bir adreste e-posta almayı sağlayan bir hizmettir. Tempmail, 10minutemail, throwaway e-posta, sahte posta veya çöp kutusu gibi isimlerle de bilinir. Birçok forum, Wi-Fi sahipleri, web siteleri ve bloglar, içerik görüntüleyebilmeleri, yorum yazabilmeleri veya bir şey indirebilmeleri için ziyaretçilerin kayıt olmalarını ister. InstaMail, istenmeyen postalardan kaçınmanıza ve güvende olmanıza yardımcı olan en gelişmiş geçici e-posta hizmetidir.
+    </article>
+
+    <article id="mail-box" class="col-12">
+        @if (Model != null)
+        {
+            <div class="wrapper container col-lg-7 d-flex gap-2">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Gönderen</th>
+                        <th scope="col">Konu</th>
+                        <th scope="col">Alınma Zamanı</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var message in Model.EmailMessages)
+                    {
+                        <tr>
+                            <th scope="row">@message.ID</th>
+                            <td>@message.Sender</td>
+                            <td>@message.Subject</td>
+                            <td>@message.Time.ToString("g")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </article>
+
+    <div class="container col-lg-7 d-flex flex-column gap-2 my-5">
+        <h2 class="text-center fw-bold mb-3">InstaMail: Geçici E-Posta Adresi Oluşturun</h2>
+        <h3>Geçici E-Posta Adresi Nedir?</h3>
+        <p>
+            Geçici e-posta adresi, kısa süreli kullanım için oluşturulan, geçici
+            ve anonim bir e-posta adresidir. Bu tür adresler, kişisel e-posta
+            bilgilerinizi paylaşmadan çeşitli web sitelerine üye olmanızı sağlar.
+            InstaMail, hızlı ve güvenli bir şekilde geçici e-posta adresi
+            oluşturmanıza yardımcı olur.
         </p>
+        <h3>InstaMail'in Avantajları</h3>
+        <ul>
+            <li><strong>Anında Oluşturma:</strong> Tek tıkla anında geçici e-posta adresinizi oluşturabilirsiniz.</li>
+            <li><strong>Gizlilik:</strong> Kişisel e-posta adresinizi paylaşmadan web sitelerine kayıt olabilirsiniz.</li>
+            <li><strong>Spam Koruması:</strong> Geçici e-posta adresleri, spam ve gereksiz e-postalardan korunmanızı sağlar.</li>
+            <li><strong>Ücretsiz Hizmet:</strong> InstaMail, tamamen ücretsiz ve sınırsız kullanım imkanı sunar.</li>
+        </ul>
+        <img class="img-fluid w-75 mx-auto" src="~/instamail/assets/images/avantages.png" alt="Avantajları" />
+
+        <h3>Geçici E-Posta Adresi Kullanım Alanları</h3>
+        <ul>
+            <li>Web sitelerine üye olurken</li>
+            <li>Forumlara veya bloglara yorum yaparken</li>
+            <li>Online kampanyalara katılırken</li>
+            <li>Dosya indirme işlemlerinde</li>
+        </ul>
+        <img class="img-fluid w-75 mx-auto" src="~/instamail/assets/images/kullanim.png" alt="Kullanım Alanları" />
+
+        <h3>InstaMail Nasıl Kullanılır?</h3>
+        <ol>
+            <li>InstaMail web sitesine girin.</li>
+            <li>"Geçici E-Posta Adresi Oluştur" butonuna tıklayın.</li>
+            <li>Oluşturulan geçici e-posta adresini kopyalayın ve dilediğiniz yerde kullanın.</li>
+            <li>Gelen kutusundan e-postalarınızı anında görüntüleyin.</li>
+        </ol>
+
+        <p><strong>Hemen InstaMail'i deneyin ve geçici e-posta adresi oluşturmanın pratik yolunu keşfedin!</strong></p>
     </div>
-</div>
+
+    <section id="copyright" class="col-12">
+        <p class="mb-0">© 2025 InstaMail | Tüm Hakları Saklıdır.</p>
+    </section>
+</main>
+
+<script>
+  function copyEmail() {
+    const email = "@Model?.EmailAddress";
+    navigator.clipboard.writeText(email).then(() => {
+      alert("E-posta adresi kopyalandı: " + email);
+    });
+  }
+</script>

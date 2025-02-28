@@ -20,8 +20,20 @@ public class InstaMailController : Controller
         _emailReceiver = emailReceiver;
     }
 
-    public ActionResult Index()
+    public ActionResult Index(int? emailId)
     {
+        if (emailId.HasValue)
+        {
+            var ınstaMail = _db.InstaMails
+                .Include(e => e.EmailMessages)
+                .FirstOrDefault(e => e.ID == emailId.Value);
+
+            if (ınstaMail != null)
+            {
+                TempData["EmailId"] = emailId.Value;
+                return View(ınstaMail);
+            }
+        }
         return View();
     }
 
@@ -33,40 +45,14 @@ public class InstaMailController : Controller
             EmailAddress = RandomEmailGenerator.Generate(),
             CreatedAt = DateTime.Now
         };
-        
+
         _db.InstaMails.Add(ınstaMail);
         _db.SaveChanges();
-        
+
         FetchEmailsForInstaMail(ınstaMail.ID);
         TempData["EmailId"] = ınstaMail.ID;
         
-        return RedirectToAction("Inbox", new { emailId = ınstaMail.ID });
-    }
-
-    public IActionResult Inbox(int? emailId)
-    {
-        if (!emailId.HasValue) 
-        {
-            emailId = TempData["EmailId"] as int?;
-        }
-
-        if (!emailId.HasValue) 
-        {
-            return RedirectToAction("Index");
-        }
-
-        var ınstaMail = _db.InstaMails
-            .Include(e => e.EmailMessages)
-            .FirstOrDefault(e => e.ID == emailId.Value);
-
-        if (ınstaMail == null)
-        {
-            return RedirectToAction("Index"); 
-        }
-
-        TempData["EmailId"] = emailId.Value; 
-
-        return View(ınstaMail);
+        return RedirectToAction("Index", new { emailId = ınstaMail.ID });
     }
 
     private void FetchEmailsForInstaMail(int emailId)
