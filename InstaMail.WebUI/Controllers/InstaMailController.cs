@@ -34,7 +34,7 @@ public class InstaMailController : Controller
                 return View(ınstaMail);
             }
         }
-        return View();
+        return View(); 
     }
 
     [HttpPost]
