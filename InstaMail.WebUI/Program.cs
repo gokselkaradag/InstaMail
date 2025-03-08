@@ -1,3 +1,4 @@
+using InstaMail.BusinessLayer.Mail;
 using InstaMail.DataAccessLayer.Concrete;
 using InstaMail.DataAccessLayer.Services;
 using InstaMail.EntityLayer.Entity;
@@ -5,6 +6,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IEmailSender, SmtpEmailSender>(i =>
+    new SmtpEmailSender(
+        builder.Configuration["EmailSender:Host"],
+        builder.Configuration.GetValue<int>("EmailSender:Port"),
+        builder.Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+        builder.Configuration["EmailSender:Username"],
+        builder.Configuration["EmailSender:Password"])
+);
 
 builder.Services.AddDbContext<InstaMailContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
