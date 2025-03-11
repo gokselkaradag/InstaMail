@@ -7,7 +7,10 @@
 <main>
     <article id="mail-create">
         <div class="caption container col-12 col-lg-6 d-flex flex-column text-center">
-            <h1 class="title">InstaMail</h1>
+            <h1 class="title">
+                <img src="~/img/mails.png" alt="Logo" width="40" height="40" class="me-2">
+                <span class="modern-title">InstaMail</span>
+            </h1>
             <p class="desc">Geçici E-Posta Adresi Oluşturun</p>
         </div>
         <div class="container col-12 col-lg-6 d-flex flex-column flex-lg-row align-items-center justify-content-center gap-2">
@@ -15,18 +18,19 @@
             <a href="#" class="mail-icon col-5 col-lg-2" onclick="copyEmail()">
                 <i class="bi bi-copy me-2"></i>Kopyala
             </a>
-            @using (Html.BeginForm("CreateEmail", "InstaMail", FormMethod.Post, new { @class = "d-inline" }))
+            @using (Html.BeginForm("CreateEmail", "InstaMail", FormMethod.Post, new { @class = "d-inline col-5 col-lg-2 mail-icon" }))
             {
-                <button type="submit" class="mail-icon col-5 col-lg-2">
+                <button type="submit" style="background-color: transparent;border:none;">
                     <i class="bi bi-envelope me-2"></i>Yeni
                 </button>
             }
         </div>
     </article>
 
-    <article id="mail-box" class="col-12">
+    
         @if (Model != null)
         {
+        <article id="mail-box" class="col-12" @(Model == null ? "style='display:none;'" : "")>
             <div class="wrapper container col-lg-7 d-flex gap-2">
                 <table class="table table-hover">
                     <thead>
@@ -38,20 +42,41 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach (var message in Model.EmailMessages)
+                    @if (Model != null && Model.EmailMessages.Any())
+                    {
+                        foreach (var message in Model.EmailMessages)
+                        {
+                            <tr>
+                                <th scope="row">@message.ID</th>
+                                <td>@message.Sender</td>
+                                <td>@message.Subject</td>
+                                <td>@message.Time.ToString("g")</td>
+                            </tr>
+                        }
+                    }
+                    else
                     {
                         <tr>
-                            <th scope="row">@message.ID</th>
-                            <td>@message.Sender</td>
-                            <td>@message.Subject</td>
-                            <td>@message.Time.ToString("g")</td>
+                            <td colspan="4" class="py-4 text-muted text-center">
+                                <div class="d-flex align-items-center justify-content-center flex-column">
+                                     <strong>📭 Önemli Bilgilendirme:</strong><br><br>
+                                    Şu an için web sitemizde aktif bir e-posta sunucusu bulunmadığından, <br>
+                                    üretilen e-posta adreslerine gelen mailler alınamamaktadır. <br><br>
+                                    Ancak, oluşturduğunuz e-posta adresleri sayesinde <br>
+                                    çeşitli web sitelerine güvenli bir şekilde üye olabilirsiniz. <br><br>
+                                    Anlayışınız için teşekkür ederiz.
+                                </div>
+                            </td>
                         </tr>
                     }
                     </tbody>
                 </table>
             </div>
+        </article>
         }
-    </article>
+        
+    
+    
 
     <div class="container col-lg-7 d-flex flex-column gap-2 my-5">
         <h2 class="text-center fw-bold mb-3">InstaMail: Geçici E-Posta Adresi Oluşturun</h2>
